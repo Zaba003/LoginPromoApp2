@@ -13,6 +13,9 @@
 		D41B4DAE248243A700F3D818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41B4DAC248243A700F3D818 /* Main.storyboard */; };
 		D41B4DB0248243A900F3D818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41B4DAF248243A900F3D818 /* Assets.xcassets */; };
 		D41B4DB3248243A900F3D818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41B4DB1248243A900F3D818 /* LaunchScreen.storyboard */; };
+		D41B4DBD2482741C00F3D818 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41B4DBC2482741C00F3D818 /* User.swift */; };
+		D41B4DC12483FB9C00F3D818 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41B4DC02483FB9C00F3D818 /* ExtensionViewController.swift */; };
+		D41B4DC324840D4200F3D818 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41B4DC224840D4200F3D818 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D41B4DAF248243A900F3D818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D41B4DB2248243A900F3D818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D41B4DB4248243A900F3D818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D41B4DBC2482741C00F3D818 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D41B4DC02483FB9C00F3D818 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		D41B4DC224840D4200F3D818 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		D41B4DA5248243A700F3D818 /* LoginPromoApp */ = {
 			isa = PBXGroup;
 			children = (
+				D41B4DBF248277D400F3D818 /* Storyboards */,
+				D41B4DBE248277B100F3D818 /* Controllers */,
+				D41B4DBB248273FF00F3D818 /* Models */,
 				D41B4DA6248243A700F3D818 /* AppDelegate.swift */,
 				D41B4DA8248243A700F3D818 /* SceneDelegate.swift */,
-				D41B4DAA248243A700F3D818 /* ViewController.swift */,
-				D41B4DAC248243A700F3D818 /* Main.storyboard */,
 				D41B4DAF248243A900F3D818 /* Assets.xcassets */,
-				D41B4DB1248243A900F3D818 /* LaunchScreen.storyboard */,
 				D41B4DB4248243A900F3D818 /* Info.plist */,
+				D41B4DC02483FB9C00F3D818 /* ExtensionViewController.swift */,
 			);
 			path = LoginPromoApp;
+			sourceTree = "<group>";
+		};
+		D41B4DBB248273FF00F3D818 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D41B4DBC2482741C00F3D818 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D41B4DBE248277B100F3D818 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D41B4DAA248243A700F3D818 /* ViewController.swift */,
+				D41B4DC224840D4200F3D818 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D41B4DBF248277D400F3D818 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D41B4DAC248243A700F3D818 /* Main.storyboard */,
+				D41B4DB1248243A900F3D818 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41B4DBD2482741C00F3D818 /* User.swift in Sources */,
+				D41B4DC12483FB9C00F3D818 /* ExtensionViewController.swift in Sources */,
 				D41B4DAB248243A700F3D818 /* ViewController.swift in Sources */,
 				D41B4DA7248243A700F3D818 /* AppDelegate.swift in Sources */,
 				D41B4DA9248243A700F3D818 /* SceneDelegate.swift in Sources */,
+				D41B4DC324840D4200F3D818 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Kirill-Zaborsky.LoginPromoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Kirill-Zaborsky.LoginPromoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
